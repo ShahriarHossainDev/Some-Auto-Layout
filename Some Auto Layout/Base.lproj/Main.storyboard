@@ -208,6 +208,7 @@
                         <segue destination="dMH-Pt-RLO" kind="relationship" relationship="viewControllers" id="fkI-8S-Buo"/>
                         <segue destination="6vc-dZ-Qjn" kind="relationship" relationship="viewControllers" id="auo-9p-PQJ"/>
                         <segue destination="6vY-Y0-4bE" kind="relationship" relationship="viewControllers" id="Ok1-E7-Lgb"/>
+                        <segue destination="p5T-RW-jGe" kind="relationship" relationship="viewControllers" id="Q0t-mf-7eB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a1X-QG-EVi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -226,14 +227,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yK-wl-9os" customClass="SAButton" customModule="Some_Auto_Layout" customModuleProvider="target">
-                                <rect key="frame" x="30" y="743" width="354" height="50"/>
+                                <rect key="frame" x="30" y="743" width="364" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8AQ-xn-0hf"/>
                                 </constraints>
                                 <state key="normal" title="LOGIN"/>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v7x-Uf-JhM" customClass="SATextField" customModule="Some_Auto_Layout" customModuleProvider="target">
-                                <rect key="frame" x="30" y="653" width="354" height="50"/>
+                                <rect key="frame" x="30" y="653" width="364" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="4FD-G0-8AC"/>
                                 </constraints>
@@ -277,12 +278,12 @@
                             <constraint firstItem="v7x-Uf-JhM" firstAttribute="top" secondItem="6Fn-Oo-7ld" secondAttribute="bottom" constant="10" id="IaN-5b-SmI"/>
                             <constraint firstItem="6Fn-Oo-7ld" firstAttribute="leading" secondItem="xyd-vB-8SN" secondAttribute="leading" constant="30" id="Ihd-nK-unQ"/>
                             <constraint firstItem="8yK-wl-9os" firstAttribute="top" secondItem="v7x-Uf-JhM" secondAttribute="bottom" constant="40" id="JI3-LL-aUe"/>
-                            <constraint firstAttribute="trailing" secondItem="v7x-Uf-JhM" secondAttribute="trailing" constant="30" id="KHL-GR-RVt"/>
+                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="v7x-Uf-JhM" secondAttribute="trailing" constant="20" symbolic="YES" id="KHL-GR-RVt"/>
                             <constraint firstItem="oSN-Xx-9oj" firstAttribute="top" secondItem="T2m-m0-9yY" secondAttribute="top" id="MDb-jp-LPD"/>
                             <constraint firstItem="MBl-N7-Lw2" firstAttribute="centerY" secondItem="T2m-m0-9yY" secondAttribute="centerY" constant="-160" id="bJb-0s-VXN"/>
                             <constraint firstItem="v7x-Uf-JhM" firstAttribute="leading" secondItem="T2m-m0-9yY" secondAttribute="leading" constant="30" id="cpg-zI-QeI"/>
                             <constraint firstAttribute="trailing" secondItem="2he-kC-LER" secondAttribute="trailing" constant="20" id="dNk-EX-Nhr"/>
-                            <constraint firstAttribute="trailing" secondItem="8yK-wl-9os" secondAttribute="trailing" constant="30" id="rr7-7l-9DW"/>
+                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="8yK-wl-9os" secondAttribute="trailing" constant="20" symbolic="YES" id="rr7-7l-9DW"/>
                             <constraint firstItem="2he-kC-LER" firstAttribute="top" secondItem="MBl-N7-Lw2" secondAttribute="bottom" constant="15" id="sVv-4K-s8C"/>
                             <constraint firstItem="oSN-Xx-9oj" firstAttribute="leading" secondItem="xyd-vB-8SN" secondAttribute="leading" id="xTa-Y3-QnY"/>
                             <constraint firstAttribute="bottom" secondItem="oSN-Xx-9oj" secondAttribute="bottom" id="yJ6-Ie-6tG"/>
@@ -609,6 +610,22 @@
             </objects>
             <point key="canvasLocation" x="-1097" y="-297"/>
         </scene>
+        <!--Program-->
+        <scene sceneID="Erg-Rw-gve">
+            <objects>
+                <viewController id="p5T-RW-jGe" customClass="ChartAnimationViewController" customModule="Some_Auto_Layout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XBZ-NV-3Xw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="nJF-w8-nN1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Program" image="books.vertical" catalog="system" id="aFI-I3-ylj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z9z-Dd-q6n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-129" y="-749"/>
+        </scene>
         <!--UIView-->
         <scene sceneID="zQD-DP-Tgy">
             <objects>
@@ -649,21 +666,51 @@
                                     <action selector="moveButtonPressed:" destination="6vY-Y0-4bE" eventType="touchUpInside" id="WGR-WI-iz5"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="japanese_noodle_with_pork.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="D0v-RP-cxg">
+                                <rect key="frame" x="143" y="234" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="E5k-c7-1mb"/>
+                                    <constraint firstAttribute="height" constant="128" id="RXr-aE-Cpb"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dna-rS-jNe">
+                                <rect key="frame" x="177" y="382" width="60" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.1176470588" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="HSt-iA-oHk"/>
+                                    <constraint firstAttribute="width" constant="60" id="MET-V3-43Q"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Size">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="sizeButtonAction:" destination="6vY-Y0-4bE" eventType="touchUpInside" id="FE7-Cq-caA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IH8-TP-iw5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="dna-rS-jNe" firstAttribute="top" secondItem="D0v-RP-cxg" secondAttribute="bottom" constant="20" id="1J3-Qo-ppk"/>
                             <constraint firstItem="uW5-XE-dqh" firstAttribute="centerX" secondItem="KGe-Wb-DzT" secondAttribute="centerX" id="CyQ-WN-mAR"/>
+                            <constraint firstItem="D0v-RP-cxg" firstAttribute="centerX" secondItem="KGe-Wb-DzT" secondAttribute="centerX" id="H9s-jz-iwh"/>
                             <constraint firstItem="j2T-vY-NxM" firstAttribute="top" secondItem="IH8-TP-iw5" secondAttribute="top" constant="20" id="P4i-Zj-Jui"/>
                             <constraint firstItem="j2T-vY-NxM" firstAttribute="leading" secondItem="IH8-TP-iw5" secondAttribute="leading" constant="20" id="n4s-Bp-0dG"/>
                             <constraint firstItem="uW5-XE-dqh" firstAttribute="top" secondItem="j2T-vY-NxM" secondAttribute="bottom" constant="20" id="nk3-UD-aaP"/>
+                            <constraint firstItem="D0v-RP-cxg" firstAttribute="top" secondItem="uW5-XE-dqh" secondAttribute="bottom" constant="20" id="u9o-m9-U98"/>
+                            <constraint firstItem="dna-rS-jNe" firstAttribute="centerX" secondItem="KGe-Wb-DzT" secondAttribute="centerX" id="zrP-aP-8pL"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="UIView" image="ruler" catalog="system" id="0oh-NQ-zg0"/>
                     <connections>
+                        <outlet property="heightConstraint" destination="RXr-aE-Cpb" id="O6D-cp-St2"/>
                         <outlet property="leadingConstraint" destination="n4s-Bp-0dG" id="H7v-vu-inz"/>
                         <outlet property="menuButton" destination="uW5-XE-dqh" id="A1O-Nx-Grt"/>
                         <outlet property="redView" destination="j2T-vY-NxM" id="p2C-xX-FXT"/>
+                        <outlet property="sizeButton" destination="dna-rS-jNe" id="8Gb-XA-rBG"/>
+                        <outlet property="sizeImageView" destination="D0v-RP-cxg" id="5Lz-L9-s8g"/>
+                        <outlet property="widthConstraint" destination="E5k-c7-1mb" id="kcv-t4-KQZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ftu-fl-oxb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -673,8 +720,10 @@
     </scenes>
     <resources>
         <image name="background-wave" width="750" height="1624"/>
+        <image name="books.vertical" catalog="system" width="128" height="107"/>
         <image name="figure.wave" catalog="system" width="81" height="128"/>
         <image name="folder" catalog="system" width="128" height="97"/>
+        <image name="japanese_noodle_with_pork.jpg" width="139" height="139"/>
         <image name="key" catalog="system" width="86" height="128"/>
         <image name="person.crop.rectangle" catalog="system" width="128" height="93"/>
         <image name="ruler" catalog="system" width="128" height="57"/>

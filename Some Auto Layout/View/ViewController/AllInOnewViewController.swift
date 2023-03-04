@@ -8,7 +8,7 @@
 import UIKit
 
 class AllInOnewViewController: UIViewController {
-
+    
     var firstName: String = ""
     var lastName: String = ""
     

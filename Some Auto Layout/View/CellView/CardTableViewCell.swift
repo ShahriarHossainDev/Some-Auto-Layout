@@ -20,7 +20,6 @@ class CardTableViewCell: UITableViewCell {
         proImageView.image = nil
         contentVIew.layer.cornerRadius = 10
         contentVIew.dropShadow()
-        //thumbnailImageView.layer.cornerRadius = 2
     }
     
     // MARK: Cell Configuration

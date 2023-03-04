@@ -28,3 +28,13 @@ extension UIView {
         
     }
 }
+
+// Color
+extension UIColor {
+    static func rgb(_ red: CGFloat, _ green: CGFloat, _ blue: CGFloat) -> UIColor {
+        return UIColor.init(red: red / 255, green: green / 255, blue: blue / 255, alpha: 1)
+    }
+    static let defaultOuterColor = UIColor.rgb(56, 25, 49)
+    static let defaultInnerColor: UIColor = .rgb(234, 46, 111)
+    static let defaultPulseFillColor = UIColor.rgb(86, 30, 63)
+}

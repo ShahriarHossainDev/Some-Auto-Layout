@@ -23,7 +23,7 @@ class DynamicViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-
+    
 }
 
 // MARK: - Table view data source
